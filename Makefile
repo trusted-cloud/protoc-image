@@ -1,5 +1,5 @@
 OWNER ?= ociscloud
-CPU_ARCH ?= $(shell uname -m)
+CPU_ARCH ?= $(shell uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
 OS ?= ubuntu
 
 PROTOBUF_IMAGE_NAME ?= protobuf
